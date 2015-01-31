@@ -31,3 +31,9 @@ Host gitlab.chenwl.com # replace with your hostname
 #### Web Port
 
 Find line `config.vm.network "forwarding_port", guest: 80, host: 8080`<sup>[link](Vagrantfile#L26)</sup>, replace `8080` to any port you want your host to listen HTTP requests.
+
+## Start
+
+Username | Password
+---------|-----------
+root     | 5iveL!fe     
