@@ -5,13 +5,13 @@
 1. `vagrant up`
 1. `vagrant ssh`
 
-This will create a ubuntu virtual machine with gitlab running. By default, web port forwards to `8080` and ssh port forwards to `8022`. You can change that in [Vagrantfile](Vagrantfile).
+This will create a ubuntu virtual machine with gitlab running. By default, web port forwards to `8080` and ssh port forwards to `8022`. You can change that in [Vagrantfile](Vagrantfile#L26~L27).
 
 ## Customization
 
 ### Hostname
 
-Change `config.vm.hostname = "gitlab.chenwl.com"` to your own hostname. This will be hostname of your site.
+Change `config.vm.hostname = "gitlab.chenwl.com"`<sup>[link](Vagrantfile#L16)</sup> to your own hostname. This will be hostname of your site.
 
 Without a valid hostname, your mail sent to Gmail will be blocked.
 
@@ -19,7 +19,7 @@ Without a valid hostname, your mail sent to Gmail will be blocked.
 
 #### SSH Port
 
-Find line `config.vm.network "forwarded_port", guest: 22, host: 8022`, replace `8022` to any port you want ssh to connect.
+Find line `config.vm.network "forwarded_port", guest: 22, host: 8022`<sup>[link](Vagrantfile#L27)</sup>, replace `8022` to any port you want ssh to connect.
 
 Git client side need to configure ssh to connect to this port by default. Append following lines to `~/.ssh/config`.
 
@@ -30,4 +30,4 @@ Host gitlab.chenwl.com # replace with your hostname
 
 #### Web Port
 
-Find line `config.vm.network "forwarding_port", guest: 80, host: 8080`, replace `8080` to any port you want your host to listen HTTP requests.
+Find line `config.vm.network "forwarding_port", guest: 80, host: 8080`<sup>[link](Vagrantfile#L26)</sup>, replace `8080` to any port you want your host to listen HTTP requests.
